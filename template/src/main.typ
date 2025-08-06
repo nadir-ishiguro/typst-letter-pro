@@ -1,4 +1,7 @@
 #import "@preview/letter-pro:3.0.0": letter-simple
+#import "@preview/datify:0.1.4": day-name, month-name, custom-date-format
+
+#let my-date = datetime.today()
 
 #set text(lang: "de")
 
@@ -24,7 +27,8 @@
     ([Steuernummer], [333/24692/5775]),
   ),
   
-  date: "12. November 2014",
+  // date: "12. November 2014",
+  date: [#custom-date-format(my-date, "DD. MMMM YYYY", "de")],
   subject: "Einspruch gegen den ESt-Bescheid",
 )
 
@@ -42,6 +46,7 @@ Anbei erhalten Sie eine Kopie der Rechnung des Gerätes.
 
 Mit freundlichen Grüßen
 #v(1cm)
+// #v(35mm) // Platz für Unterschrift
 Anja Ahlsen
 
 #v(1fr)
