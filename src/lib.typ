@@ -412,7 +412,7 @@
 
 /// This function takes your whole document as its `body` and formats it as a simple letter.
 /// 
-/// The default font is set to _Source Sans Pro_ without hyphenation. The body text will be justified.
+/// The default font is set to _Source Sans Pro_ without hyphenation. The body text will not be justified.
 /// 
 /// - format (string): The format of the letter, which decides the position of the folding marks and the size of the header.
 ///   #table(
@@ -604,7 +604,7 @@
         v(0.65em)
       }
       
-      set par(justify: true)
+      set par(justify: false)
       body
     },
 
